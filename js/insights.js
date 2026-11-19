@@ -246,7 +246,7 @@ export function insightReport(sessions) {
     buckets: trans,
     extra: avgTrans != null ? `Average transition: ${Math.round(avgTrans)}s` : null,
     text: transBW && transBW.diff > 0.015
-      ? `Sets after a ${transBW.best.label} transition run ${pct(transBW.diff)} better than after ${transBW.worst.label}. Body by Science recommends moving quickly between machines for the metabolic effect. Weigh that against this.`
+      ? `Sets after a ${transBW.best.label} transition run ${pct(transBW.diff)} better than after ${transBW.worst.label}. Moving quickly between machines is usually recommended for its metabolic effect. Weigh that against this.`
       : null,
   });
 

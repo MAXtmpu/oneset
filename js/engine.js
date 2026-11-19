@@ -9,7 +9,7 @@
 // We use an Epley-style capacity estimate with TUL turned into rep-equivalents:
 //     capacity = load × (1 + TUL / (30 × repSeconds))
 // repSeconds is the median seconds-per-rep for that exercise across your own history, so the
-// model adapts to your cadence (≈10 s for Body by Science, ≈6 s for 2/4). This gives a sensible
+// model adapts to your cadence (≈10 s for a 5/5 cadence, ≈6 s for 2/4). This gives a sensible
 // trade-off between load and time, and it's the single number everything else is built on.
 
 import { technique } from './data/techniques.js';
@@ -169,7 +169,7 @@ export function evaluateSession(session, sessions, routine) {
         ? `This came after a ${interval}-day gap, longer than this routine’s maximum of ${cfg.max}. Lost conditioning is a more likely cause than poor recovery. Go back to your base gap of ${cfg.base} days.`
         : `Your body hadn’t finished recovering from the last session. Wait longer before the next one: ${rec} days instead of ${I}.`);
       if (prior.length && prior[prior.length - 1].verdict?.type === 'regressed') {
-        notes.push('That’s two "recover more" verdicts in a row. Consider dropping an exercise, or switching to the Consolidated Big Three for a few sessions.');
+        notes.push('That’s two "recover more" verdicts in a row. Consider dropping an exercise, or switching to Consolidated Three for a few sessions.');
       }
       break;
     }

@@ -1,8 +1,8 @@
-// Exercise catalogue. Machine-first, as in Body by Science / Nautilus / MedX-style HIT.
+// Exercise catalogue. Machine-first, as in most single-set-to-failure training.
 // `pattern` groups exercises for the picker; `cues` are short form reminders shown in the gym.
 
 export const EXERCISES = [
-  // Big Five
+  // Foundation Five
   { id: 'seated-row', name: 'Seated Row', pattern: 'Pull', equipment: 'machine',
     cues: 'Chest on pad, shoulders down. Pull elbows back past the torso, pause, return slowly without letting the stack touch.' },
   { id: 'chest-press', name: 'Chest Press', pattern: 'Push', equipment: 'machine',
@@ -17,7 +17,7 @@ export const EXERCISES = [
   // Common machine additions
   { id: 'pullover', name: 'Pullover', pattern: 'Pull', equipment: 'machine',
     cues: 'Elbows on pads, drive arc with elbows (not hands) down to torso, pause, return to full stretch slowly.' },
-  { id: 'pec-fly', name: 'Pec Fly / Pec Deck', pattern: 'Push', equipment: 'machine',
+  { id: 'pec-fly', name: 'Pec Fly', pattern: 'Push', equipment: 'machine',
     cues: 'Forearms on pads, bring elbows together in front, pause, open to a comfortable stretch.' },
   { id: 'lateral-raise', name: 'Lateral Raise', pattern: 'Push', equipment: 'machine',
     cues: 'Lead with elbows to shoulder height, pause, lower slowly. Keep traps relaxed.' },

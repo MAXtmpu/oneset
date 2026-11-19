@@ -35,7 +35,7 @@ export function render() {
     </div>
     <div class="card">
       <h3>Demo data</h3>
-      <p class="muted">Load about 5 months of simulated Big Five training to explore the charts and insights. <b>This replaces your history</b>, so export a backup first.</p>
+      <p class="muted">Load about 5 months of simulated Foundation Five training to explore the charts and insights. <b>This replaces your history</b>, so export a backup first.</p>
       <div class="btn-row" style="margin-top:10px">
         <button data-act="demo">Load demo</button>
         ${hasDemo ? '<button data-act="clear-demo">Remove demo data</button>' : ''}
@@ -49,7 +49,13 @@ export function render() {
       <p><b>Progression.</b> Each set gets a capacity score from load and TUL (an Epley-style estimate, calibrated to your own rep speed), so “heavier but shorter” is still counted as progress. Stay at the same load and beat your time. Once you pass the top of the TUL window, the load goes up.</p>
       <p><b>Verdict and rest.</b> After each session, your exercises are compared with last time. Progress means keep the gap. A plateau or a drop means you need more recovery, so the gap is extended. Long layoffs aren’t mistaken for under-recovery. Intensity techniques add rest.</p>
       <p><b>Insights.</b> Time of day, exercise order, transition speed, readiness and rest gap are compared against your own trend, and a finding only appears once there’s enough data.</p>
-      <p class="muted">Based on ideas from Doug McGuff & John Little (<i>Body by Science</i>), Drew Baye, Arthur Jones and Ken Hutchins. Not medical advice. Check with a doctor before training to failure.</p>
+      <p class="muted">Not medical advice. Check with a doctor before training to failure.</p>
+    </div>
+
+    <h2>References</h2>
+    <div class="card stack" style="font-size:14px">
+      <p>McGuff, D. &amp; Little, J. (2009). <i>Body by Science: A Research-Based Program for Strength Training, Body Building, and Complete Fitness in 12 Minutes a Week</i>. McGraw-Hill.</p>
+      <p class="muted">Routines and time-under-load ranges are general training approaches informed by this literature. OneSet is independent and is not affiliated with, or endorsed by, any author or publisher.</p>
     </div>
     <p class="muted" style="text-align:center;font-size:12px">OneSet v1.0 · works offline</p>`;
 }

@@ -11,26 +11,26 @@ const slot = (exerciseId, technique = 'none', extra = {}) => ({ exerciseId, tech
 export const BUILT_IN_ROUTINES = [
   {
     id: 'big-five',
-    name: 'The Big Five',
+    name: 'Foundation Five',
     builtIn: true,
-    tagline: 'McGuff’s Body by Science workout. One session, once a week.',
+    tagline: 'Five compound movements, once a week. The core slow-strength workout.',
     description:
       'Five compound machine movements covering the whole body, done in a fixed order with as little rest as possible between them. ' +
-      'Body by Science puts each set at roughly 1.5–2 minutes of time under load at a very slow cadence. When you go past the top of that range, add weight. ' +
+      'Each set runs roughly 1.5–2 minutes of time under load at a very slow cadence (after McGuff & Little, 2009). When you go past the top of that range, add weight. ' +
       'Start with 7 days between sessions. The app lengthens the gap if your progress stalls.',
     intervalDays: 7, minIntervalDays: 5, maxIntervalDays: 14,
     tulMin: 90, tulMax: 120,
     workouts: [
-      { id: 'A', name: 'Big Five', slots: [
+      { id: 'A', name: 'Foundation Five', slots: [
         slot('seated-row'), slot('chest-press'), slot('pulldown'), slot('overhead-press'), slot('leg-press'),
       ] },
     ],
   },
   {
     id: 'big-five-split',
-    name: 'Big Five Split (A/B)',
+    name: 'Foundation Split (A/B)',
     builtIn: true,
-    tagline: 'Shorter alternating sessions for when the full Big Five gets too taxing.',
+    tagline: 'Shorter alternating sessions for when the full Foundation Five gets too taxing.',
     description:
       'As you get stronger, each set takes more out of you. Splitting the work into two shorter workouts keeps the intensity high and lets you train a little more often. ' +
       'Each muscle group is still hit hard about once a week. A covers legs, pulling and pressing. B covers the posterior chain, rowing and overhead work.',
@@ -43,7 +43,7 @@ export const BUILT_IN_ROUTINES = [
   },
   {
     id: 'consolidated-three',
-    name: 'Consolidated Big Three',
+    name: 'Consolidated Three',
     builtIn: true,
     tagline: 'Minimum effective dose for advanced trainees, or for breaking a stall.',
     description:
@@ -53,14 +53,14 @@ export const BUILT_IN_ROUTINES = [
     intervalDays: 10, minIntervalDays: 7, maxIntervalDays: 21,
     tulMin: 90, tulMax: 120,
     workouts: [
-      { id: 'A', name: 'Big Three', slots: [slot('leg-press'), slot('pulldown'), slot('chest-press')] },
+      { id: 'A', name: 'Consolidated Three', slots: [slot('leg-press'), slot('pulldown'), slot('chest-press')] },
     ],
   },
   {
     id: 'full-body-ab',
     name: 'Full-Body A/B',
     builtIn: true,
-    tagline: 'Classic HIT A/B in the Drew Baye style. Twice a week, 60–90 s sets.',
+    tagline: 'Classic HIT A/B. Two alternating full-body workouts, 60–90 s sets.',
     description:
       'Two full-body workouts done alternately, each with 5–6 exercises at a slow, controlled cadence. Every set goes to momentary muscular failure. ' +
       'The shorter TUL window (60–90 s) suits a slightly heavier load. Start with 3–4 days between sessions. Every major muscle group is trained in both workouts, from different angles.',
@@ -98,7 +98,7 @@ export const BUILT_IN_ROUTINES = [
     id: 'pre-exhaust',
     name: 'Pre-Exhaust Circuit',
     builtIn: true,
-    tagline: 'Arthur Jones / Nautilus style. Isolation into compound with zero rest.',
+    tagline: 'Isolation into compound with zero rest. Very demanding.',
     description:
       'Each pair starts with an isolation movement taken to failure, then goes straight into a compound movement for the same muscle. In the compound lift the fresh helper muscles push the pre-fatigued target muscle past its normal failure point. ' +
       'Move straight from one machine to the next. Log both sets after the pair. Very demanding, so allow 5+ days between sessions.',
@@ -115,17 +115,17 @@ export const BUILT_IN_ROUTINES = [
   },
   {
     id: 'big-five-advanced',
-    name: 'Big Five: Intensified',
+    name: 'Foundation Five: Intensified',
     builtIn: true,
     tagline: 'Short block with intensifiers. Use for 3–4 sessions, then go back to standard.',
     description:
-      'The Big Five with one intensifier on most exercises, for breaking through a plateau. Forced negatives and forced reps need a training partner. ' +
+      'Foundation Five with one intensifier on most exercises, for breaking through a plateau. Forced negatives and forced reps need a training partner. ' +
       'Each technique raises the recovery cost, so the default gap is longer and the post-workout recommendation adds rest for every technique you actually do. ' +
       'The primary set is still compared like-for-like, so the progress charts stay honest.',
     intervalDays: 9, minIntervalDays: 7, maxIntervalDays: 16,
     tulMin: 90, tulMax: 120,
     workouts: [
-      { id: 'A', name: 'Big Five+', slots: [
+      { id: 'A', name: 'Foundation Five+', slots: [
         slot('seated-row', 'restPause'), slot('chest-press', 'forcedNegatives'), slot('pulldown', 'staticHold'),
         slot('overhead-press'), slot('leg-press', 'restPause'),
       ] },

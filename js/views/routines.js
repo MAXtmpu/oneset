@@ -119,7 +119,7 @@ export function mount(root, [id], match) {
       let exId = el.value;
       if (!exId) return;
       if (exId === '__new') {
-        const name = prompt('Exercise name (e.g. "Nautilus Hip & Back")');
+        const name = prompt('Exercise name (e.g. "Hip & Back")');
         if (!name || !name.trim()) { el.value = ''; return; }
         const pattern = prompt(`Category: ${PATTERNS.join(', ')}`, 'Push');
         exId = addCustomExercise(name, PATTERNS.find((p) => p.toLowerCase() === (pattern || '').trim().toLowerCase()) || 'Other').id;

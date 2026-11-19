@@ -36,11 +36,25 @@ function safeGet(k) { try { return localStorage.getItem(k); } catch { return nul
 function safeSet(k, v) { try { localStorage.setItem(k, v); return true; } catch { return false; } }
 function safeDel(k) { try { localStorage.removeItem(k); } catch { /* ignore */ } }
 
+// Built-in workouts were renamed in v1.1. Older sessions keep the old label, so map them on load.
+const RENAMED_WORKOUTS = { 'Big Five': 'Foundation Five', 'Big Three': 'Consolidated Three', 'Big Five+': 'Foundation Five+' };
+const RENAMED_ROUTINES = {
+  'The Big Five': 'Foundation Five', 'Big Five Split (A/B)': 'Foundation Split (A/B)',
+  'Consolidated Big Three': 'Consolidated Three', 'Big Five: Intensified': 'Foundation Five: Intensified',
+};
+function migrate(data) {
+  for (const s of data.sessions || []) {
+    if (RENAMED_WORKOUTS[s.workoutName]) s.workoutName = RENAMED_WORKOUTS[s.workoutName];
+    if (RENAMED_ROUTINES[s.routineName]) s.routineName = RENAMED_ROUTINES[s.routineName];
+  }
+  return data;
+}
+
 function load() {
   const raw = safeGet(KEY);
   if (!raw) return blank();
   try {
-    const data = JSON.parse(raw);
+    const data = migrate(JSON.parse(raw));
     return { ...blank(), ...data, settings: { ...DEFAULT_SETTINGS, ...(data.settings || {}) } };
   } catch {
     return blank();
@@ -171,6 +185,7 @@ export function exportJSON() {
 export function importJSON(text) {
   const data = JSON.parse(text);
   if (!data || !Array.isArray(data.sessions)) throw new Error('Not a OneSet backup file.');
+  migrate(data);
   const next = { ...blank(), ...data, settings: { ...DEFAULT_SETTINGS, ...(data.settings || {}) } };
   delete next.app; delete next.exportedAt;
   state = next;

@@ -1,6 +1,6 @@
 # OneSet: a HIT (single set to failure) training app
 
-An offline-first iPhone web app for Body by Science / Drew Baye style training: one set per
+An offline-first iPhone web app for high-intensity, single-set-to-failure strength training: one set per
 exercise, slow cadence, taken to momentary muscular failure. Time under load (TUL) is
 recorded automatically. After each workout you get a verdict and a recommended rest period.
 
@@ -41,13 +41,13 @@ you need more recovery. Anything else counts as held steady.
 
 | Routine | Structure | Gap | TUL |
 |---|---|---|---|
-| The Big Five | Seated row, chest press, pulldown, overhead press, leg press | 7 d (5–14) | 90–120 s |
-| Big Five Split (A/B) | A: leg press, pulldown, chest press · B: leg curl, row, overhead press, lower back | 4 d (3–10) | 90–120 s |
-| Consolidated Big Three | Leg press, pulldown, chest press | 10 d (7–21) | 90–120 s |
-| Full-Body A/B | Two 6-exercise full-body workouts (Baye-style) | 3 d (2–8) | 60–90 s |
+| Foundation Five | Seated row, chest press, pulldown, overhead press, leg press | 7 d (5–14) | 90–120 s |
+| Foundation Split (A/B) | A: leg press, pulldown, chest press · B: leg curl, row, overhead press, lower back | 4 d (3–10) | 90–120 s |
+| Consolidated Three | Leg press, pulldown, chest press | 10 d (7–21) | 90–120 s |
+| Full-Body A/B | Two 6-exercise full-body workouts (classic HIT A/B) | 3 d (2–8) | 60–90 s |
 | Upper / Lower | 6 upper / 6 lower, leg extension pre-exhausts leg press | 3 d (2–8) | 60–90 s |
-| Pre-Exhaust Circuit | 4 isolation→compound pairs, zero rest (Nautilus style) | 5 d (4–12) | 60–90 s |
-| Big Five: Intensified | Big Five with rest-pause, forced negatives and a static hold | 9 d (7–16) | 90–120 s |
+| Pre-Exhaust Circuit | 4 isolation→compound pairs, zero rest | 5 d (4–12) | 60–90 s |
+| Foundation Five: Intensified | Foundation Five with rest-pause, forced negatives and a static hold | 9 d (7–16) | 90–120 s |
 
 Intensity techniques: rest-pause, forced reps, forced negatives, timed static hold, breakdown
 (drop set), negative-only and pre-exhaust. They're timed as a separate phase after failure, so

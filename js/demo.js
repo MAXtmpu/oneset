@@ -1,4 +1,4 @@
-// Demo data generator: about 5 months of simulated Big Five training. Weights are picked with the
+// Demo data generator: about 5 months of simulated Foundation Five training. Weights are picked with the
 // app's own suggestion engine, and TUL comes from a hidden "true strength" with realistic effects
 // (recovery, time of day, order fatigue, readiness), so the insights have something to find.
 

@@ -13,7 +13,7 @@ let n = 0;
 function mkSession(daysAgo, sets, extra = {}) {
   const startedAt = Date.now() - daysAgo * DAY;
   return {
-    id: 's' + (++n), routineId: 'big-five', workoutId: 'A', workoutName: 'Big Five', startedAt, endedAt: startedAt + 900000,
+    id: 's' + (++n), routineId: 'big-five', workoutId: 'A', workoutName: 'Foundation Five', startedAt, endedAt: startedAt + 900000,
     sets: sets.map(([exerciseId, weight, tul, reps], i) => ({
       exerciseId, exerciseName: exerciseId, order: i + 1, weight, unit: 'kg', tul, reps: reps ?? Math.round(tul / 10),
       startedAt: startedAt + i * 180000, endedAt: startedAt + i * 180000 + tul * 1000, technique: 'none', failed: true,
