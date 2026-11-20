@@ -1,14 +1,16 @@
 :root {
   color-scheme: dark;
-  --bg: #0f1115;
-  --surface: #181b21;
-  --surface-2: #20242c;
-  --line: #2c313b;
-  --text: #f0efec;
-  --text-2: #b9b8b0;
-  --muted: #858a94;
-  --accent: #ff6a2b;
-  --accent-ink: #1a0b03;
+  /* Matches the iPhone app: off-black and off-white surfaces, ink for controls,
+     colour only for data and status. */
+  --bg: #0e0e0d;
+  --surface: #1a1a18;
+  --surface-2: #262624;
+  --line: #2d2d2a;
+  --text: #f2f1ec;
+  --text-2: #a9a8a2;
+  --muted: #7a7974;
+  --accent: #f2f1ec;
+  --accent-ink: #111110;
   --good: #33c26b;
   --warn: #f2b233;
   --bad: #f05a5a;
@@ -17,9 +19,9 @@
   --series-1: #3987e5;
   --div-pos: #3987e5;
   --div-neg: #d95926;
-  --grid: #2a2e36;
+  --grid: #262624;
   --band: rgba(57, 135, 229, 0.12);
-  --radius: 16px;
+  --radius: 20px;
   --safe-b: env(safe-area-inset-bottom, 0px);
   --safe-t: env(safe-area-inset-top, 0px);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
@@ -27,15 +29,15 @@
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     color-scheme: light;
-    --bg: #f6f5f2;
-    --surface: #ffffff;
-    --surface-2: #efeee9;
-    --line: #dddbd3;
-    --text: #0b0b0b;
-    --text-2: #52514e;
-    --muted: #77756f;
-    --accent: #e8551b;
-    --accent-ink: #ffffff;
+    --bg: #f4f3ef;
+    --surface: #fcfbf8;
+    --surface-2: #ebeae5;
+    --line: #e2e0d9;
+    --text: #161615;
+    --text-2: #5c5b56;
+    --muted: #84837d;
+    --accent: #161615;
+    --accent-ink: #f7f6f2;
     --good: #1a8f4a;
     --warn: #b77900;
     --bad: #d03b3b;
@@ -43,7 +45,7 @@
     --series-1: #2a78d6;
     --div-pos: #2a78d6;
     --div-neg: #eb6834;
-    --grid: #e6e4dd;
+    --grid: #ebeae5;
     --band: rgba(42, 120, 214, 0.10);
   }
 }
@@ -64,7 +66,7 @@ h1 { font-size: 30px; line-height: 1.1; margin: 12px 0 4px; letter-spacing: -0.0
 h2 { font-size: 19px; margin: 24px 0 10px; letter-spacing: -0.01em; }
 h3 { font-size: 16px; margin: 0 0 6px; }
 p { margin: 6px 0; }
-a { color: var(--accent); }
+a { color: var(--text); text-underline-offset: 2px; }
 small, .muted { color: var(--muted); }
 .sub { color: var(--text-2); margin: 0 0 12px; }
 .row { display: flex; align-items: center; gap: 10px; }
@@ -88,7 +90,7 @@ small, .muted { color: var(--muted); }
   font-size: 11px; color: var(--muted); text-decoration: none; padding: 4px 0;
 }
 #tabs a .ti { font-size: 20px; line-height: 22px; }
-#tabs a.active { color: var(--accent); }
+#tabs a.active { color: var(--text); }
 body.running #tabs { display: none; }
 
 /* ── Cards & lists ────────────────────────────────────────── */
@@ -109,7 +111,7 @@ body.running #tabs { display: none; }
   padding: 2px 7px; border-radius: 999px; background: var(--surface-2); color: var(--text-2);
   vertical-align: middle;
 }
-.pill.accent { background: color-mix(in srgb, var(--accent) 20%, transparent); color: var(--accent); }
+.pill.accent { background: var(--surface-2); color: var(--text); }
 .pill.good { background: color-mix(in srgb, var(--good) 18%, transparent); color: var(--good); }
 .pill.warn { background: color-mix(in srgb, var(--warn) 20%, transparent); color: var(--warn); }
 .pill.bad { background: color-mix(in srgb, var(--bad) 18%, transparent); color: var(--bad); }
@@ -122,7 +124,7 @@ button, .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   text-decoration: none; touch-action: manipulation; user-select: none; -webkit-user-select: none;
 }
-button:active, .btn:active { transform: scale(0.98); filter: brightness(1.1); }
+button:active, .btn:active { transform: scale(0.98); opacity: 0.85; }
 button.primary, .btn.primary { background: var(--accent); color: var(--accent-ink); }
 button.big { width: 100%; font-size: 20px; padding: 18px; border-radius: 18px; }
 button.huge { width: 100%; font-size: 26px; padding: 28px 16px; border-radius: 22px; letter-spacing: 0.02em; }
@@ -148,7 +150,7 @@ label.field > span { display: block; font-size: 13px; color: var(--text-2); marg
 .chip.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 .seg { display: flex; background: var(--surface-2); border-radius: 12px; padding: 3px; }
 .seg button { flex: 1; padding: 8px 6px; font-size: 14px; background: transparent; color: var(--text-2); border-radius: 10px; }
-.seg button.on { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+.seg button.on { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 
 .stepper { display: flex; align-items: center; gap: 8px; }
 .stepper button { width: 56px; height: 56px; font-size: 26px; padding: 0; border-radius: 16px; }

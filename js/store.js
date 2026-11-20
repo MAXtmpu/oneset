@@ -6,8 +6,8 @@ import { EXERCISES } from './data/exercises.js';
 import { evaluateSession, byStart, isLogged } from './engine.js';
 import { uid } from './util.js';
 
-const KEY = 'oneset.v1';
-const RUN_KEY = 'oneset.runner.v1';
+const KEY = 'myodose.v1';
+const RUN_KEY = 'myodose.runner.v1';
 const SCHEMA = 1;
 
 export const DEFAULT_SETTINGS = {
@@ -35,6 +35,12 @@ function blank() {
 function safeGet(k) { try { return localStorage.getItem(k); } catch { return null; } }
 function safeSet(k, v) { try { localStorage.setItem(k, v); return true; } catch { return false; } }
 function safeDel(k) { try { localStorage.removeItem(k); } catch { /* ignore */ } }
+
+// The app was called OneSet until November 2026. Move data saved under the old keys so nothing is lost.
+for (const [oldKey, newKey] of [['oneset.v1', KEY], ['oneset.runner.v1', RUN_KEY]]) {
+  const old = safeGet(oldKey);
+  if (old !== null && safeGet(newKey) === null && safeSet(newKey, old)) safeDel(oldKey);
+}
 
 // Built-in workouts were renamed in v1.1. Older sessions keep the old label, so map them on load.
 const RENAMED_WORKOUTS = { 'Big Five': 'Foundation Five', 'Big Three': 'Consolidated Three', 'Big Five+': 'Foundation Five+' };
@@ -179,12 +185,12 @@ export const clearRunner = () => safeDel(RUN_KEY);
 
 // ── Backup ──────────────────────────────────────────────────────────────────────────────────
 export function exportJSON() {
-  return JSON.stringify({ app: 'OneSet', exportedAt: new Date().toISOString(), ...state }, null, 2);
+  return JSON.stringify({ app: 'Myodose', exportedAt: new Date().toISOString(), ...state }, null, 2);
 }
 
 export function importJSON(text) {
   const data = JSON.parse(text);
-  if (!data || !Array.isArray(data.sessions)) throw new Error('Not a OneSet backup file.');
+  if (!data || !Array.isArray(data.sessions)) throw new Error('Not a Myodose backup file.');
   migrate(data);
   const next = { ...blank(), ...data, settings: { ...DEFAULT_SETTINGS, ...(data.settings || {}) } };
   delete next.app; delete next.exportedAt;

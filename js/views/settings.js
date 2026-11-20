@@ -43,7 +43,7 @@ export function render() {
     </div>
     <button class="danger big ghost" data-act="reset">Erase all data</button>
 
-    <h2>How OneSet works</h2>
+    <h2>How Myodose works</h2>
     <div class="card stack" style="font-size:15px">
       <p><b>One set to failure.</b> Each exercise is a single set, done slowly and smoothly until you can’t move the weight despite your full effort (momentary muscular failure). Time under load (TUL) is recorded automatically.</p>
       <p><b>Progression.</b> Each set gets a capacity score from load and TUL (an Epley-style estimate, calibrated to your own rep speed), so “heavier but shorter” is still counted as progress. Stay at the same load and beat your time. Once you pass the top of the TUL window, the load goes up.</p>
@@ -55,9 +55,9 @@ export function render() {
     <h2>References</h2>
     <div class="card stack" style="font-size:14px">
       <p>McGuff, D. &amp; Little, J. (2009). <i>Body by Science: A Research-Based Program for Strength Training, Body Building, and Complete Fitness in 12 Minutes a Week</i>. McGraw-Hill.</p>
-      <p class="muted">Routines and time-under-load ranges are general training approaches informed by this literature. OneSet is independent and is not affiliated with, or endorsed by, any author or publisher.</p>
+      <p class="muted">Routines and time-under-load ranges are general training approaches informed by this literature. Myodose is independent and is not affiliated with, or endorsed by, any author or publisher.</p>
     </div>
-    <p class="muted" style="text-align:center;font-size:12px">OneSet v1.0 · works offline</p>`;
+    <p class="muted" style="text-align:center;font-size:12px">Myodose v1.0 · works offline</p>`;
 }
 
 export function mount(root) {
@@ -95,8 +95,8 @@ export function mount(root) {
       });
       rerender();
     },
-    export: () => shareFile(`oneset-backup-${new Date().toISOString().slice(0, 10)}.json`, exportJSON(), 'application/json'),
-    csv: () => shareFile(`oneset-${new Date().toISOString().slice(0, 10)}.csv`, exportCSV(), 'text/csv'),
+    export: () => shareFile(`myodose-backup-${new Date().toISOString().slice(0, 10)}.json`, exportJSON(), 'application/json'),
+    csv: () => shareFile(`myodose-${new Date().toISOString().slice(0, 10)}.csv`, exportCSV(), 'text/csv'),
     import: () => root.querySelector('[name="importFile"]').click(),
     demo: () => {
       if (getState().sessions.some((x) => !x.demo) && !confirm('Replace your workout history with demo data? Export a backup first if you want to keep it.')) return;

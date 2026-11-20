@@ -1,4 +1,4 @@
-# OneSet: a HIT (single set to failure) training app
+# Myodose: a HIT (single set to failure) training app
 
 An offline-first iPhone web app for high-intensity, single-set-to-failure strength training: one set per
 exercise, slow cadence, taken to momentary muscular failure. Time under load (TUL) is
@@ -77,6 +77,9 @@ It has to be served over HTTPS once, so that iOS can install it and cache it for
 **GitHub Pages (free):** push this folder to a GitHub repository, then Settings → Pages → deploy from branch `main` / root.
 Netlify or Cloudflare Pages also work: drag the folder in.
 
+The live site is **https://myodose.app** (the `CNAME` file tells GitHub Pages to serve it there). getmyodose.com and
+myodose.co.uk forward to it from the registrar. The privacy policy is at https://myodose.app/privacy.html.
+
 Then on the iPhone:
 1. Open the URL in **Safari**.
 2. Tap Share → **Add to Home Screen**.
@@ -99,7 +102,7 @@ The app shows "Update ready, tap to reload" the next time it opens online.
 ```bash
 python3 -m http.server 8000     # then open http://localhost:8000
 npm test                        # engine + insights unit tests (node --test)
-python3 tools/make-icons.py     # regenerate icons
+python3 tools/make-icons.py     # regenerate icons from tools/icon-1024.png
 ```
 
 No build step, no dependencies. Plain ES modules. Most of the logic lives in `js/engine.js`

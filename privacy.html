@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Myodose Privacy Policy</title>
+  <meta name="description" content="How the Myodose web app and the Myodose app for iPhone and Apple Watch handle your data.">
+  <meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="icons/icon-192.png">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f3ef;
+      --surface: #fcfbf8;
+      --line: #e2e0d9;
+      --text: #161615;
+      --text-2: #5c5b56;
+      --muted: #84837d;
+            --todo-bg: #fff4d6;
+      --todo-ink: #6b4a00;
+      --radius: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #0e0e0d;
+        --surface: #1a1a18;
+        --line: #2d2d2a;
+        --text: #f2f1ec;
+        --text-2: #a9a8a2;
+        --muted: #7a7974;
+        --todo-bg: #3a2e10;
+        --todo-ink: #f2d38a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--text); }
+    body { font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+    header { margin-bottom: 28px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text-2); font-weight: 600; text-decoration: none; }
+    .brand img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); }
+    h1 { font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; margin: 20px 0 6px; }
+    h2 { font-size: 21px; line-height: 1.25; letter-spacing: -0.01em; margin: 40px 0 8px; }
+    h3 { font-size: 17px; margin: 24px 0 4px; }
+    p, li { color: var(--text-2); }
+    p { margin: 8px 0; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 4px 0; }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--text); text-decoration-color: var(--muted); text-underline-offset: 3px; }
+    a:hover { text-decoration-color: currentColor; }
+    .meta { color: var(--muted); font-size: 14px; margin: 0; }
+    .summary { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin: 24px 0 8px; }
+    .summary h2 { margin-top: 0; font-size: 17px; }
+    .summary ul { margin-bottom: 0; }
+    nav.toc { margin: 24px 0 0; }
+    nav.toc ol { padding-left: 20px; margin: 6px 0; columns: 2; column-gap: 24px; }
+    nav.toc li { break-inside: avoid; }
+    @media (max-width: 520px) { nav.toc ol { columns: 1; } }
+    .todo { background: var(--todo-bg); color: var(--todo-ink); border-radius: 6px; padding: 1px 6px; font-weight: 600; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="brand" href="./"><img src="icons/icon-192.png" alt="">Myodose</a>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective 20 November 2026</p>
+  </header>
+
+  <p>This policy explains how Myodose handles your information. It covers the Myodose web app at this address and the Myodose app for iPhone and Apple Watch, including its widgets.</p>
+
+  <section class="summary" aria-labelledby="short">
+    <h2 id="short">The short version</h2>
+    <ul>
+      <li>Myodose has no accounts. Your training data stays on your device and is never sent to us.</li>
+      <li>There are no ads, no analytics and no tracking. Myodose includes no third-party SDKs.</li>
+      <li>Apple Health data stays on your iPhone. It is never uploaded to iCloud or to us, and is never used for advertising.</li>
+      <li>If you turn on iCloud sync, your workouts are kept in your own private iCloud storage, which we cannot see.</li>
+      <li>Apple handles all payments. We never see your card or bank details.</li>
+    </ul>
+  </section>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#web">The web app</a></li>
+      <li><a href="#ios">The iPhone and Apple Watch app</a></li>
+      <li><a href="#never">What we never do</a></li>
+      <li><a href="#delete">Keeping and deleting your data</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="who">1. Who we are</h2>
+  <p>Myodose is made by <span class="todo">[your name or trading name]</span>, based in the United Kingdom (“we”, “us”). For UK data protection law, we are the controller of any personal data this policy says we handle. As explained below, Myodose is built so that we handle almost none.</p>
+
+  <h2 id="web">2. The web app</h2>
+  <h3>Data you enter</h3>
+  <p>Workouts, routines and settings are saved in your browser’s own storage on your device. They are not sent anywhere. Anyone with access to your device and browser can see them, and clearing your browser’s site data deletes them.</p>
+  <h3>Offline files</h3>
+  <p>The app saves its own files on your device so it works without a connection. These files contain no personal information.</p>
+  <h3>Cookies</h3>
+  <p>The web app sets no cookies.</p>
+  <h3>Hosting</h3>
+  <p>The web app is hosted on GitHub Pages. When you load it, GitHub records technical information such as your IP address for security purposes, under the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. We do not receive or use these records.</p>
+  <h3>Backups</h3>
+  <p>When you export a backup or a spreadsheet, the file goes wherever you choose to save or share it. We never receive a copy.</p>
+
+  <h2 id="ios">3. The iPhone and Apple Watch app</h2>
+
+  <h3>Data you enter</h3>
+  <p>Workouts, routines, exercises, settings and goals are stored inside the app on your iPhone. A copy is shared with the Myodose Apple Watch app and the Myodose widgets on the same devices so they can show your next session. None of it is sent to us.</p>
+
+  <h3>Apple Health</h3>
+  <p>Using Apple Health is optional, and you choose which types of data to allow. If you allow it, Myodose:</p>
+  <ul>
+    <li><strong>reads</strong> heart rate, heart rate variability, resting heart rate, sleep, wrist temperature during sleep, breathing rate and your other workouts. It uses them to check how recovered you are before a session, to chart heart rate during each set, and to find which of these relate to your results;</li>
+    <li><strong>saves</strong> each finished strength workout to Apple Health.</li>
+  </ul>
+  <p>With each workout, Myodose keeps a summary of that morning’s readings and the workout’s heart rate, stored in the app on your iPhone. Apple Health data is:</p>
+  <ul>
+    <li>never sent to us or to anyone else;</li>
+    <li>never included in iCloud sync;</li>
+    <li>never used for advertising or marketing, and never sold.</li>
+  </ul>
+  <p>You can change or withdraw access at any time in the Settings app, under Health → Data Access &amp; Devices → Myodose.</p>
+
+  <h3>Bluetooth heart-rate straps</h3>
+  <p>If you connect a chest strap or armband, Myodose uses Bluetooth to read heart rate from it during a workout. It reads nothing else from the strap and does not use Bluetooth to find your location.</p>
+
+  <h3>Apple Watch</h3>
+  <p>The Apple Watch app and your iPhone exchange the workout in progress, including heart rate from the watch. This goes directly between your own devices.</p>
+
+  <h3>iCloud sync <span class="meta">(Myodose Pro, optional)</span></h3>
+  <p>If you turn on iCloud sync, Myodose stores a copy of your workouts, routines, custom exercises, exercise settings, goals and app settings in your private iCloud database. This keeps them the same on all your devices signed in to your Apple Account.</p>
+  <ul>
+    <li>Apple Health readings and heart rate are removed before anything is uploaded, so they stay on each device.</li>
+    <li>Demo data is never synced.</li>
+    <li>Your private iCloud database is held by Apple under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. It is tied to your Apple Account, and we cannot access it.</li>
+  </ul>
+  <p>You can turn sync off at any time in Myodose’s Settings. To delete the synced copy, open the Settings app and go to your name → iCloud → Manage Account Storage, then choose Myodose.</p>
+
+  <h3>Purchases</h3>
+  <p>Myodose Pro is sold through the App Store. Apple processes the payment. The app only learns whether you have an active subscription or lifetime purchase, and when a subscription renews or ends. It uses this to unlock Pro features. We never see your name, Apple Account email or payment details.</p>
+
+  <h3>Calendar</h3>
+  <p>When you tap “Add next session to calendar”, Myodose opens Apple’s standard event screen, filled in with your next session. Nothing is saved unless you tap Add. Myodose cannot read your calendar and does not ask for calendar access.</p>
+
+  <h3>Backups and exports</h3>
+  <p>A backup is a complete copy of your Myodose data. If you have used Apple Health or heart rate, it includes the Health readings and heart rate saved with your workouts. The file goes wherever you choose, for example Files or iCloud Drive, so please store it with care. We never receive a copy.</p>
+
+  <h3>Crash reports</h3>
+  <p>If you have chosen to share analytics with app developers in your iPhone’s settings, Apple may send us anonymous crash reports and usage statistics. You can turn this off in the Settings app, under Privacy &amp; Security → Analytics &amp; Improvements.</p>
+
+  <h2 id="never">4. What we never do</h2>
+  <ul>
+    <li>Run a server that collects your workouts or health data.</li>
+    <li>Use analytics, advertising or tracking tools, or track you across other companies’ apps and websites.</li>
+    <li>Sell, rent or share your data with data brokers, advertisers or insurers.</li>
+    <li>Use Apple Health data for any purpose other than the features described above.</li>
+  </ul>
+
+  <h2 id="delete">5. Keeping and deleting your data</h2>
+  <p>Your data stays until you delete it:</p>
+  <ul>
+    <li><strong>Web app:</strong> use Erase all data in Settings, or clear this site’s data in your browser.</li>
+    <li><strong>iPhone and Apple Watch:</strong> use Erase all data in Myodose’s Settings, or delete the app. Data Myodose saved to Apple Health stays there until you delete it in the Health app.</li>
+    <li><strong>iCloud:</strong> with sync on, Erase all data also deletes the synced copy, on every device. You can also delete it as described in section 3.</li>
+  </ul>
+
+  <h2 id="rights">6. Your rights</h2>
+  <p>Under UK data protection law (the UK GDPR and the Data Protection Act 2018), you have rights including the right to:</p>
+  <ul>
+    <li>access your personal data;</li>
+    <li>have it corrected or deleted;</li>
+    <li>restrict or object to its use;</li>
+    <li>receive it in a portable format.</li>
+  </ul>
+  <p>Because your Myodose data is held on your own devices and in your own iCloud storage, you can use most of these rights directly in the app: view, edit, export or erase your data at any time. We hold no Myodose data about you, so we have nothing further to provide, but you are welcome to contact us with any question.</p>
+  <p>You also have the right to complain to the Information Commissioner’s Office (ICO) at <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk</a>.</p>
+
+  <h2 id="children">7. Children</h2>
+  <p>Myodose is a strength training app intended for adults. It is not directed at children under 13, and we do not knowingly collect information from them.</p>
+
+  <h2 id="changes">8. Changes to this policy</h2>
+  <p>If we change how Myodose handles data, we will update this page and its effective date before the change takes effect. If a change is significant, for example a new kind of data leaving your device, we will also explain it in the app.</p>
+
+  <h2 id="contact">9. Contact</h2>
+  <p>For any questions about this policy or your data, email <span class="todo">[contact email address]</span>.</p>
+
+  <footer>
+    Myodose · <a href="./">Open the web app</a>
+  </footer>
+</main>
+</body>
+</html>

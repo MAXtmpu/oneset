@@ -35,7 +35,7 @@ export function render() {
         <p class="muted">Recommended next: <b>${esc(fmtDate(rec.nextDate))}</b> (${rec.recommendedInterval}-day gap)</p>
       </div>
     </div>`;
-  })() : `<div class="card"><h3>Welcome to OneSet</h3>
+  })() : `<div class="card"><h3>Welcome to Myodose</h3>
       <p class="muted">One set per exercise, taken slowly to momentary muscular failure. Your first session sets the baseline. After that you’ll get weight suggestions, a progress verdict and a recommended rest period.</p></div>`;
 
   const slots = workout.slots.map((slot, i) => {
