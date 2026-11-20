@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Myodose Support</title>
+  <meta name="description" content="Help with Myodose: purchases, backups, sync, Apple Health, Apple Watch and training questions.">
+  <meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="icons/icon-192.png">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f3ef;
+      --surface: #fcfbf8;
+      --line: #e2e0d9;
+      --text: #161615;
+      --text-2: #5c5b56;
+      --muted: #84837d;
+      --radius: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #0e0e0d;
+        --surface: #1a1a18;
+        --line: #2d2d2a;
+        --text: #f2f1ec;
+        --text-2: #a9a8a2;
+        --muted: #7a7974;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: var(--bg); color: var(--text); }
+    body { font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+    header { margin-bottom: 28px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text-2); font-weight: 600; text-decoration: none; }
+    .brand img { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); }
+    h1 { font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; margin: 20px 0 6px; }
+    h2 { font-size: 21px; line-height: 1.25; letter-spacing: -0.01em; margin: 40px 0 8px; }
+    h3 { font-size: 17px; margin: 24px 0 4px; }
+    p, li { color: var(--text-2); }
+    p { margin: 8px 0; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 4px 0; }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--text); text-decoration-color: var(--muted); text-underline-offset: 3px; }
+    a:hover { text-decoration-color: currentColor; }
+    .meta { color: var(--muted); font-size: 14px; margin: 0; }
+    .summary { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin: 24px 0 8px; }
+    .summary h2 { margin-top: 0; font-size: 17px; }
+    .summary ul { margin-bottom: 0; }
+    nav.toc { margin: 24px 0 0; }
+    nav.toc ol { padding-left: 20px; margin: 6px 0; columns: 2; column-gap: 24px; }
+    nav.toc li { break-inside: avoid; }
+    @media (max-width: 520px) { nav.toc ol { columns: 1; } }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <a class="brand" href="./"><img src="icons/icon-192.png" alt="">Myodose</a>
+    <h1>Help and support</h1>
+    <p class="meta">For the Myodose app for iPhone and Apple Watch, and the Myodose web app</p>
+  </header>
+
+  <section class="summary" aria-labelledby="contact">
+    <h2 id="contact">Contact us</h2>
+    <p>Email <a href="mailto:support@myodose.app">support@myodose.app</a> and we’ll get back to you as soon as we can. It helps to include your iPhone model, your iOS version and the app version (at the bottom of Settings in the app).</p>
+    <p>For questions about your data, email <a href="mailto:privacy@myodose.app">privacy@myodose.app</a> or read the <a href="privacy.html">privacy policy</a>.</p>
+  </section>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#pro">Myodose Pro and purchases</a></li>
+      <li><a href="#data">Backups, new phones and sync</a></li>
+      <li><a href="#health">Apple Health and heart rate</a></li>
+      <li><a href="#watch">Apple Watch</a></li>
+      <li><a href="#training">Training questions</a></li>
+      <li><a href="#web">The web app</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="pro">Myodose Pro and purchases</h2>
+  <h3>I paid, but Pro isn’t unlocked</h3>
+  <p>Open Settings in Myodose, tap Myodose Pro, then <strong>Restore purchases</strong>. Make sure you’re signed in to the App Store with the same Apple Account you bought it with.</p>
+  <h3>How do I cancel my subscription?</h3>
+  <p>Open the Settings app, tap your name, then <strong>Subscriptions</strong>, and choose Myodose. You keep Pro until the end of the period you’ve paid for. Deleting the app doesn’t cancel a subscription.</p>
+  <h3>Can I get a refund?</h3>
+  <p>The App Store handles all payments, so refunds come from Apple. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
+  <h2 id="data">Backups, new phones and sync</h2>
+  <h3>How do I back up my training?</h3>
+  <p>In Settings, tap <strong>Export backup</strong> and save the file to Files or iCloud Drive. <strong>Restore from backup</strong> brings it back, and replaces what’s on the phone.</p>
+  <h3>Moving to a new iPhone</h3>
+  <p>With iCloud sync on (Myodose Pro), your workouts, routines, goals and settings appear on the new iPhone by themselves. Without it, export a backup on the old phone and restore it on the new one. A full iPhone backup or transfer also carries your data across.</p>
+  <h3>Sync isn’t working</h3>
+  <p>Check that you’re signed in to the same iCloud account on each device, then tap <strong>Sync now</strong> in Settings. Heart rate and Apple Health readings never sync; they stay on the iPhone where they were recorded. Demo data never syncs either.</p>
+
+  <h2 id="health">Apple Health and heart rate</h2>
+  <h3>Recovery check or insights show nothing</h3>
+  <p>Myodose needs about a week of Health data to learn your normal, and a few workouts with Health data before it can say what affects your results. Check access in the Settings app under <strong>Health → Data Access &amp; Devices → Myodose</strong>.</p>
+  <h3>My heart-rate strap won’t connect</h3>
+  <p>Any chest strap or armband that uses the standard Bluetooth heart-rate profile works. Put the strap on (most only switch on when they detect skin contact), make sure Bluetooth is on for Myodose in the Settings app, then tap <strong>Connect a heart-rate strap</strong> under Heart rate in Myodose’s Settings. Close other apps that might already be connected to it.</p>
+
+  <h2 id="watch">Apple Watch</h2>
+  <h3>The Watch app doesn’t open with my workout</h3>
+  <p>In Myodose’s Settings, turn on <strong>Open Myodose on Apple Watch when a workout starts</strong>. Your Watch needs to be unlocked, on your wrist and near your iPhone. The Watch app is part of Myodose Pro.</p>
+
+  <h2 id="training">Training questions</h2>
+  <h3>Why did my next workout move?</h3>
+  <p>After every workout Myodose compares each exercise with last time. Progress keeps your gap the same. A plateau or a drop usually means you need more recovery, so the gap gets longer. Days you’ve marked as days you can’t train only ever move a session later.</p>
+  <h3>The suggested weight looks wrong</h3>
+  <p>Suggestions come from how long your set lasted. A set that ends before the target time suggests easing the weight, and one that runs past it suggests going up. Your first few workouts are about finding the right weights, so expect some adjustment.</p>
+  <h3>Is it safe to train to failure?</h3>
+  <p>Myodose gives general training information, not medical advice. If you have a health condition, are pregnant, or are new to exercise, check with your GP first. Don’t train when you’re ill or injured.</p>
+
+  <h2 id="web">The web app</h2>
+  <p>The free <a href="./">web app</a> runs in Safari. Tap Share, then <strong>Add to Home Screen</strong>, and always open it from that icon; it then works offline. Its data stays in that Home Screen app, so export a backup from its Settings regularly. Web app backups also restore into the iPhone app.</p>
+
+  <footer>
+    Myodose · <a href="./">Open the web app</a> · <a href="privacy.html">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
