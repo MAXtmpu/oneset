@@ -5,7 +5,7 @@ import os, subprocess
 
 here = os.path.dirname(os.path.abspath(__file__))
 src = os.path.join(here, 'icon-1024.png')
-out = os.path.join(here, '..', 'icons')
+out = os.path.join(here, '..', 'app', 'icons')
 os.makedirs(out, exist_ok=True)
 for n in (180, 192, 512):
     subprocess.run(['sips', '-z', str(n), str(n), src, '--out', os.path.join(out, f'icon-{n}.png')],

@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { capacity, compareSet, evaluateSession, suggestNext, nextWorkoutIndex, exerciseHistory } from '../js/engine.js';
-import { insightReport, strengthScoreSeries } from '../js/insights.js';
-import { BUILT_IN_ROUTINES } from '../js/data/routines.js';
-import { generateDemo } from '../js/demo.js';
+import { capacity, compareSet, evaluateSession, suggestNext, nextWorkoutIndex, exerciseHistory } from '../app/js/engine.js';
+import { insightReport, strengthScoreSeries } from '../app/js/insights.js';
+import { BUILT_IN_ROUTINES } from '../app/js/data/routines.js';
+import { generateDemo } from '../app/js/demo.js';
 
 const DAY = 86400000;
 const bigFive = BUILT_IN_ROUTINES.find((r) => r.id === 'big-five');

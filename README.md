@@ -1,5 +1,16 @@
 # Myodose: a HIT (single set to failure) training app
 
+This repository serves **https://myodose.app** through GitHub Pages:
+
+| Path | What |
+| --- | --- |
+| `index.html`, `assets/` | The "coming soon" landing page, with screenshots of the iPhone app (`assets/shots/`, light and dark) and icons rendered from the app icon. |
+| `privacy.html`, `support.html` | The privacy policy and support page that the App Store listing links to. |
+| `sw.js` | Retires the web app's old service worker at the site root, so returning visitors see the landing page. |
+| `app/` | The original web app, kept working at `myodose.app/app/` but no longer linked. |
+
+The rest of this README describes the web app in `app/`.
+
 An offline-first iPhone web app for high-intensity, single-set-to-failure strength training: one set per
 exercise, slow cadence, taken to momentary muscular failure. Time under load (TUL) is
 recorded automatically. After each workout you get a verdict and a recommended rest period.
@@ -71,7 +82,7 @@ A sentence only appears once each group has 3+ data points and the difference is
 
 ## Getting it onto your iPhone
 
-The app is static files: `index.html`, `styles.css`, `js/`, `icons/`, `manifest.webmanifest`, `sw.js`.
+The app is static files in `app/`: `index.html`, `styles.css`, `js/`, `icons/`, `manifest.webmanifest`, `sw.js`.
 It has to be served over HTTPS once, so that iOS can install it and cache it for offline use. After that it runs with no signal.
 
 **GitHub Pages (free):** push this folder to a GitHub repository, then Settings → Pages → deploy from branch `main` / root.
